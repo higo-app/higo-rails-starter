@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+
+  # Comment out to use React
+  # root to: 'pages#index'
+  %w[about].each do |page|
+    get page, to: 'react_app#index'
+  end
+
+  # Uncomment to use React
+  root to: 'react_app#index'
+  get '*path', to: 'react_app#index'
 end
