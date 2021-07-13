@@ -1,24 +1,15 @@
-# README
+# Higo Rails Starter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Rails
 
-Things you may want to cover:
+- Haml for server-rendered HTML
+- RSpec, Capybara and FactoryBot for integration testing
+- Devise for authentication
+- Bootstrap for styling
+- ActiveStorage for file storage
 
-* Ruby version
+## React
 
-* System dependencies
+If you want to use React, take a look at the bottom of the `cofig/routes.rb` file to enable the front-end routing. This is a simplified setup that is not production ready, but will let you get started quickly.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Don't hesitate to install any alternatives that you prefer or any other dependencies you deem necessary.
