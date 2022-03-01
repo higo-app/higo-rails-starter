@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  scope :api do
+    resources :payments
+    resources :invoices
+  end
+
   devise_for :users
 
   # Comment out to use React

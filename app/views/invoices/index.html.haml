@@ -1,0 +1,33 @@
+%h1 Listing invoices
+
+%table
+  %thead
+    %tr
+      %th Emitter rfc
+      %th Receiver rfc
+      %th Fiscal
+      %th Amount cents
+      %th Amount currency
+      %th Emitted at
+      %th Expired at
+      %th
+      %th
+      %th
+
+  %tbody
+    - @invoices.each do |invoice|
+      %tr
+        %td= invoice.emitter_rfc
+        %td= invoice.receiver_rfc
+        %td= invoice.fiscal_id
+        %td= invoice.amount_cents
+        %td= invoice.amount_currency
+        %td= invoice.emitted_at
+        %td= invoice.expired_at
+        %td= link_to 'Show', invoice
+        %td= link_to 'Edit', edit_invoice_path(invoice)
+        %td= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Invoice', new_invoice_path

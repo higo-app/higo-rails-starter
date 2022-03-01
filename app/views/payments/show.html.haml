@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Receiver account number:
+  = @payment.receiver_clabe
+%p
+  %b Sender account number:
+  = @payment.sender_clabe
+%p
+  %b Invoice fiscal:
+  = @payment.invoice_fiscal_id
+%p
+  %b Amount cents:
+  = @payment.amount_cents
+%p
+  %b Amount currency:
+  = @payment.amount_currency
+
+= link_to 'Edit', edit_payment_path(@payment)
+\|
+= link_to 'Back', payments_path

@@ -1,0 +1,31 @@
+%h1 Listing payments
+
+%table
+  %thead
+    %tr
+      %th Receiver account number
+      %th Sender account number
+      %th Invoice fiscal
+      %th Amount cents
+      %th Amount currency
+      %th Sent at
+      %th
+      %th
+      %th
+
+  %tbody
+    - @payments.each do |payment|
+      %tr
+        %td= payment.receiver_clabe
+        %td= payment.sender_clabe
+        %td= payment.invoice_fiscal_id
+        %td= payment.amount_cents
+        %td= payment.amount_currency
+        %td= payment.sent_at
+        %td= link_to 'Show', payment
+        %td= link_to 'Edit', edit_payment_path(payment)
+        %td= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Payment', new_payment_path
